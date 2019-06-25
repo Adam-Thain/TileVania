@@ -51,4 +51,16 @@ public class ScenePersist : MonoBehaviour
     }
 
     #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// Destroy this Gameobject (can be called from anywhere
+    /// </summary>
+    public void DestroyScenePersist()
+    {
+        Destroy(gameObject);
+    }
+
+    #endregion
 }

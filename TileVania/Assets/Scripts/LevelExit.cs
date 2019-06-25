@@ -41,6 +41,9 @@ public class LevelExit : MonoBehaviour
         // Get the current scene index number
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        // Destoy the Current Scenepersist object so it does not delete the ScenePersist Object in the next level
+        FindObjectOfType<ScenePersist>().DestroyScenePersist();
+
         // Load the next scene after the current scene
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
