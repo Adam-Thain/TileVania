@@ -281,3 +281,6 @@ C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\obj\Debug
 C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\obj\Debug\Assembly-CSharp.dll
 C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\obj\Debug\Assembly-CSharp.pdb
+C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\Temp\bin\Debug\Boo.Lang.dll
+C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\adamr\OneDrive\Documents\Unity Projects\2D Projects\TileVania\Temp\bin\Debug\UnityEditor.UI.xml

@@ -5,6 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
+    #region Variables
+
     // Config
     [SerializeField] private float runSpeed = 5f;
     [SerializeField] private float jumpSpeed = 5f;
@@ -21,10 +23,14 @@ public class Player : MonoBehaviour
     BoxCollider2D myFeet;
     float gravityScaleAtStart;
 
+    #endregion
+
+    #region Private Methods
+
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
-    void Start()
+    private void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -36,7 +42,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// Update is called once per frame
     /// </summary>
-    void Update()
+    private void Update()
     {
         // If The Player is Dead
         if (!isAlive) { return; }
@@ -125,9 +131,17 @@ public class Player : MonoBehaviour
     {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy","Hazards")))
         {
+            // Set isAlive to false IE Dead
             isAlive = false;
+
+            // Set animation to Dying
             myAnimator.SetTrigger("Dying");
+
+            // Set velocity to death kick
             GetComponent<Rigidbody2D>().velocity = deathKick;
+
+            // Find and Call the ProcessPlayerDeath Method in our game session
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
@@ -145,4 +159,6 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f);
         }
     }
+
+    #endregion
 }

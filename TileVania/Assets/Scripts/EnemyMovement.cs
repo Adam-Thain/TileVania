@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    #region Variables
+
     /// <summary>
     /// 
     /// </summary>
@@ -13,6 +15,10 @@ public class EnemyMovement : MonoBehaviour
     /// 
     /// </summary>
     Rigidbody2D myRigidBody;
+
+    #endregion
+
+    #region private Methods
 
     /// <summary>
     /// Start is called before the first frame update
@@ -40,18 +46,24 @@ public class EnemyMovement : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
+    /// <param name="collision"></param>
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        transform.localScale = new Vector2(-(Mathf.Sign(myRigidBody.velocity.x)),1f);
+    }
+
+    #endregion
+
+    #region public methods
+
+    /// <summary>
+    /// 
+    /// </summary>
     /// <returns></returns>
     bool IsFacingRight()
     {
         return transform.localScale.x > 0;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="collision"></param>
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        transform.localScale = new Vector2(-(Mathf.Sign(myRigidBody.velocity.x)),1f);
-    }
+    #endregion
 }
