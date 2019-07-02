@@ -48,6 +48,9 @@ TagManager:
   - name: Climbing
     uniqueID: 2957151713
     locked: 0
+  - name: Interactables
+    uniqueID: 2788046933
+    locked: 0
   - name: Enemy
     uniqueID: 2854192997
     locked: 0
@@ -59,7 +62,4 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3623020503
-    locked: 0
-  - name: Interactables
-    uniqueID: 2788046933
     locked: 0

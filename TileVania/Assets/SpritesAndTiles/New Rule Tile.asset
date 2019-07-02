@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultSprite: {fileID: 21300012, guid: a13f5ed0ab39f0048a5e3ba2c3e75808, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
-  - m_Neighbors: 0000000000000000000000000000000001000000000000000100000002000000
+  - m_Neighbors: 0000000001000000000000000100000001000000000000000100000002000000
     m_Sprites:
     - {fileID: 21300040, guid: a13f5ed0ab39f0048a5e3ba2c3e75808, type: 3}
     m_AnimationSpeed: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
     - {fileID: 21300046, guid: a13f5ed0ab39f0048a5e3ba2c3e75808, type: 3}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
-    m_RuleTransform: 0
+    m_RuleTransform: 2
     m_Output: 0
     m_ColliderType: 1
     m_RandomTransform: 0
